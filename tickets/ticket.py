@@ -1,6 +1,6 @@
 # Creation du tickets
 
-def collecter_infos_ticket():
+def collecter_info_ticket():
     print("=== Création d'un ticket ===\n")
     
     # Collecte des informations
@@ -32,4 +32,4 @@ def collecter_infos_ticket():
 
     return prenom, nom, courriel, description, priorite
     
-collecter_infos_ticket()
+collecter_info_ticket()
