@@ -1,12 +1,26 @@
-import interface
 import gestion
+import interface
+import ticket
 
-
-
-# Modification de ticket, Option 3 de interface
-    elif interface.menu == "3":
+while True:
+    choix = int(interface.menu())
+    
+    if choix == 1:
+    
+        prenom, nom, courriel, probleme, _ = ticket.collecter_info_ticket()
+        nom_complet = prenom + " " + nom
+        print(nom_complet)    
+        gestion.creer_ticket(probleme, nom_complet, courriel)
+        
+    elif interface.menu() == "2":
+        print("Afficher la liste des tickets.\n")
+        gestion.afficher_tickets()
+    
+    elif interface.menu() == "3":
         print("Modification de ticket.\n")
         gestion.update_ticket()
 
-
+        
+for ticket in gestion.tickets:
+    sauvegarde.sauvegarde_ticket(["numero"], ["probleme"], ["nom"], ["email"])
 
