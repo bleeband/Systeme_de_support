@@ -32,4 +32,4 @@ def collecter_info_ticket():
 
     return prenom, nom, courriel, description, priorite
     
-collecter_info_ticket()
+# collecter_info_ticket()
