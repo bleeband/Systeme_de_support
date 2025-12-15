@@ -3,10 +3,8 @@ import interface
 import ticket
 
 while True:
-
     choix = int(interface.menu())
-
-
+    
     if choix == 1:
     
         prenom, nom, courriel, probleme, _ = ticket.collecter_info_ticket()
@@ -14,3 +12,11 @@ while True:
         print(nom_complet)    
         gestion.creer_ticket(probleme, nom_complet, courriel)
         
+    elif interface.menu() == "2":
+        print("Afficher la liste des tickets.\n")
+        gestion.afficher_tickets()
+
+
+        
+for ticket in gestion.tickets:
+    sauvegarde.sauvegarde_ticket(["numero"], ["probleme"], ["nom"], ["email"])
