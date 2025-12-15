@@ -3,8 +3,8 @@ import gestion
 
 
 
-for ticket in gestion.tickets:
-    if interface.menu == "3":
+# Modification de ticket, Option 3 de interface
+    elif interface.menu == "3":
         print("Modification de ticket.\n")
         gestion.update_ticket()
 
