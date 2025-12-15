@@ -29,9 +29,9 @@ def supprimer_ticket(num_ticket):
             print(f"Ticket supprimé !")
             break
 
-creer_ticket("Bug", "Clement", "clement_laflamme@videotron.ca")
-afficher_tickets()
-update_ticket(1, "probleme", "Bug grave")
-afficher_tickets()
-supprimer_ticket(1)
-afficher_tickets()
+# creer_ticket("Bug", "Clement", "clement_laflamme@videotron.ca")
+# afficher_tickets()
+# update_ticket(1, "probleme", "Bug grave")
+# afficher_tickets()
+# supprimer_ticket(1)
+# afficher_tickets()
