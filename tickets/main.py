@@ -15,8 +15,12 @@ while True:
     elif interface.menu() == "2":
         print("Afficher la liste des tickets.\n")
         gestion.afficher_tickets()
-
+    
+    elif interface.menu() == "3":
+        print("Modification de ticket.\n")
+        gestion.update_ticket()
 
         
 for ticket in gestion.tickets:
     sauvegarde.sauvegarde_ticket(["numero"], ["probleme"], ["nom"], ["email"])
+
