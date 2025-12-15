@@ -31,5 +31,6 @@ def collecter_info_ticket():
     print("=== TERMINER ===")
 
     return prenom, nom, courriel, description, priorite
-    
-collecter_info_ticket()
+
+# TEST
+# collecter_info_ticket()
