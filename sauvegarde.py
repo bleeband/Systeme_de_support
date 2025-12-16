@@ -1,10 +1,10 @@
 #système de sauvegarde
 
-def sauvegarde_ticket(numero_ticket, probleme, nom, email):
+def sauvegarde_ticket(numero_ticket, probleme, nom, prenom, email, priorite):
     # on ouvre un fichier, si inexistant ça le crée au format numero_de_ticket.json
     file = open(f"{numero_ticket}.json", 'w')
     # on inscrit dans l'info dans le .json
-    file.write(f"Numero:{numero_ticket}\nProbleme:{probleme}\nNom:{nom}\nEmail:{email}\n")
+    file.write(f"Numero:{numero_ticket}\nProbleme:{probleme}\nNom:{nom}\nPrenom:{prenom}\nEmail:{email}\nPriorite:{priorite}\n")
     # on ferme le fichier
     file.close()
 

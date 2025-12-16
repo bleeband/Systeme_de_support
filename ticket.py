@@ -1,14 +1,14 @@
 # Creation du tickets
 
 def collecter_info_ticket():
-    print("=== Création d'un ticket ===\n")
+    print("\n--- Création d'un ticket ---\n")
     
     # Collecte des informations
     prenom = input("Veuillez entrer votre prénom : ")
     nom = input("Veuillez entrer votre nom : ")
-    courriel = input("Veuillez entrer votre courriel : ")
-    description = input("Entrer une description du problème : ")
-
+    email = input("Veuillez entrer votre courriel : ")
+    probleme = input("Entrer une description du problème : ")
+    
     # Sélection de la priorité
     print("Priorité : ")
     print("1 - Faible")
@@ -26,11 +26,12 @@ def collecter_info_ticket():
     else:
         print(input("Veuillez faire un choix entre 1, 2, 3 : "))
         priorite = "faible"
-    print(f"Merci, votre ticket numéro #var_a_definir à été créé.  Un suivi vous sera fait sous 48 hrs\n")
-    print(f"{prenom} {nom} {courriel} : {description} --> {priorite}\n")
-    print("=== TERMINER ===")
 
-    return prenom, nom, courriel, description, priorite
+    print(f"\nMerci, votre ticket à été créé.  Un suivi vous sera fait sous 48 hrs\n")
+    print(f"{prenom} {nom} {email} : {probleme} --> {priorite}\n")
+    print("--- TERMINER ---\n")
+
+    return prenom, nom, email, probleme, priorite
 
 # TEST
 # collecter_info_ticket()
