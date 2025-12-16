@@ -4,34 +4,38 @@ import ticket
 import sauvegarde
 
 while True:
-    choix = int(interface.menu())
+    choix = interface.menu()
     
-    if choix == 1:
-    
-        prenom, nom, courriel, probleme, _ = ticket.collecter_info_ticket()
-        nom_complet = prenom + " " + nom
-        print(nom_complet)    
-        gestion.creer_ticket(probleme, nom_complet, courriel)
+    if choix == "1":
+        prenom, nom, email, probleme, priorite = ticket.collecter_info_ticket()   
+        gestion.creer_ticket(probleme, nom, prenom, email, priorite)
         
-    elif interface.menu() == "2":
-        print("Afficher la liste des tickets.\n")
+    elif choix == "2":
+        print("\n--- Afficher la liste des tickets ---\n")
         gestion.afficher_tickets()
     
-    elif interface.menu() == "3":
-        print("Modification de ticket.\n")
-        gestion.update_ticket(num_ticket, info_a_changer, changement)
+    elif choix == "3":
+            print("\n--- Modification de ticket ---\n")
+            numero_ticket = int(input("Entrer le numero de ticket : "))
+            info_a_changer = input("Entrer une nouvelle description : ")
+            gestion.update_ticket(numero_ticket, info_a_changer)
+            print("\nTicket modifié.\n")
 
     elif choix == "4":
-        gestion.supprimer_ticket(num_ticket)
+        print("\n--- Suppression du ticket ---\n")
+        numero_ticket = int(input("Entrer le numero de ticket : "))
+        if gestion.supprimer_ticket(numero_ticket):
+            print("\nTicket supprimé\n")
+        else:
+            print("\nTicket introuvable\n")
 
     elif choix == "5":
-        print("Au revoir !")
-        for ticket in gestion.tickets:
-            sauvegarde.sauvegarde_ticket(["numero"], ["probleme"], ["nom"], ["email"])
+        print("\nAu revoir !")
+        sauvegarde.sauvegarde_ticket(numero_ticket, probleme, nom, prenom, email, priorite)
         break
 
     else:
-        print("Choix invalide, recommencez svp")
+        print("Choix invalide, recommencez svp\n")
         
 
 
