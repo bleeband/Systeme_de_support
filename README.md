@@ -12,9 +12,22 @@ tickets/
 ├── sauvegarde.py    (Fichier JSON - Membre 4)
 └── main.py          (Tous ensemble)
 ```
+### TEAM GÉLINOTTE
+```plaintext
+          ,~.
+       ,-'__ `-,
+      {,-'  `. }              ,')
+     ,( a )   `-.__         ,',')~,
+    <=.) (         `-.__,==' ' ' '}
+      (   )                      /
+       `-'\   ,                    )
+           |  \        `~.        /
+           \   `._        \      /
+            \     `._____,'    ,'
+             `-.             ,'
+                `-._     _,-'
+                    77jj'
+                   //_||
+                __//--'/`          
+              ,--'/`  '
 
-### Scénario de Conflit Planifié
-
-Etape 1 : Tous modifient `main.py` en même temps
-Etape 2 : Résolution des conflits en équipe
-Etape 3 : Revue de code croisée
