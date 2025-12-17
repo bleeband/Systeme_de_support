@@ -31,7 +31,8 @@ while True:
 
     elif choix == "5":
         print("\nAu revoir !")
-        sauvegarde.sauvegarde_ticket(numero_ticket, probleme, nom, prenom, email, priorite)
+        for ticket_item in gestion.tickets:
+            sauvegarde.sauvegarde_ticket(ticket_item["numero"], ticket_item["probleme"], ticket_item["nom"], ticket_item["prenom"], ticket_item["email"], ticket_item["priorite"])
         break
 
     else:
