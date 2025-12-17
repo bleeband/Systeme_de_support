@@ -19,15 +19,17 @@ while True:
             numero_ticket = int(input("Entrer le numero de ticket : "))
             info_a_changer = input("Entrer une nouvelle description : ")
             gestion.update_ticket(numero_ticket, info_a_changer)
-            print("\nTicket modifié.\n")
 
     elif choix == "4":
         print("\n--- Suppression du ticket ---\n")
-        numero_ticket = int(input("Entrer le numero de ticket : "))
-        if gestion.supprimer_ticket(numero_ticket):
-            print("\nTicket supprimé\n")
-        else:
-            print("\nTicket introuvable\n")
+        try:
+            numero_ticket = int(input("Entrer le numero de ticket : "))
+            if gestion.supprimer_ticket(numero_ticket):
+                print(f"Ticket supprimé  avec succès !")
+            else:
+                print("\nTicket introuvable")
+        except ValueError:
+            print("\nChoix invalide, entrer un nombre")
 
     elif choix == "5":
         print("\nAu revoir !")
@@ -36,7 +38,7 @@ while True:
         break
 
     else:
-        print("Choix invalide, recommencez svp\n")
+        print("\nChoix invalide, veuillez recommencer s.v.p")
         
 
 
