@@ -1,5 +1,5 @@
 tickets = [
-    {"numero": 0,"nom": "dufour", "prenom": "marc", "email": "aa@bb.cc", "probleme": "Blue screen", "priorite": "faible" },
+    {"numero": 0,"nom": "Dufour", "prenom": "Marc", "email": "aa@bb.con", "probleme": "Code 18", "priorite": "faible" },
 ]
 numero_ticket = 1
 
@@ -8,18 +8,17 @@ def creer_ticket(probleme, nom, prenom, email, priorite):
 
     tickets.append({'numero': numero_ticket, 'probleme': probleme, 'nom': nom, 'prenom': prenom, "email": email, "priorite": priorite})
     numero_ticket +=1
-    print(f"Ticket créé !")
 
 def afficher_tickets():
     for ticket in tickets:
-        print(f"Ticket # {ticket['numero']} - {ticket['priorite']} - {ticket['probleme']} demandé par {ticket['prenom']} {ticket['nom']} ({ticket['email']})")
+        print(f"Ticket # {ticket['numero']} • {ticket['priorite'].capitalize()} • {ticket['probleme']}; demandé par {ticket['prenom'].title()} {ticket['nom'].title()} ({ticket['email']})")
 
 def update_ticket(numero_ticket, info_a_changer):
 
     for ticket in tickets:
         if ticket['numero'] == numero_ticket:
             ticket['probleme'] = info_a_changer
-            print(f"Changement effectué !")
+            print(f"\nChangement effectué  avec succès !")
             break         
 
 def supprimer_ticket(numero_ticket):
@@ -28,7 +27,7 @@ def supprimer_ticket(numero_ticket):
         if ticket['numero'] == numero_ticket:
             tickets.remove(ticket)
             numero_ticket -=1
-            print(f"Ticket supprimé !")
+
             break
 
 # creer_ticket("Bug", "Clement", "clement_laflamme@videotron.ca")

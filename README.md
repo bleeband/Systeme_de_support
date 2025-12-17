@@ -6,13 +6,25 @@ Créer un système simple de gestion de tickets
 
 ```txt
 tickets/
-├── ticket.py        (Classe Ticket - Membre 1)
-├── gestion.py       (CRUD tickets - Membre 2)
-├── interface.py     (Menu utilisateur - Membre 3)
-├── sauvegarde.py    (Fichier JSON - Membre 4)
+├── ticket.py        (Classe Ticket - Marc-André)
+| └── collecte les informations
+├── gestion.py       (CRUD tickets - Clément)
+| └── créer un nouveau ticket
+| └── modifier un ticket
+| └── suprimmer un ticket
+| └── afficher les tickets
+├── interface.py     (Menu utilisateur - Pascale)
+| └── affichage menu
+├── sauvegarde.py    (Fichier JSON - Mathieu)
+| └── sauvegarge le ticket sous un fichier .json
 └── main.py          (Tous ensemble)
+  └── Gestion du menu
+  └── Gestion des fonctions
 ```
+
 ### TEAM GÉLINOTTE
+
+Marc-André Dufour, Pascale Mercier, Mathieu Gosselin, Clément Laflamme
 ```plaintext
           ,~.
        ,-'__ `-,
@@ -31,3 +43,5 @@ tickets/
                 __//--'/`          
               ,--'/`  '
 
+
+© 2025
